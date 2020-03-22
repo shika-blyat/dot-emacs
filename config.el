@@ -51,3 +51,11 @@
 ;;
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
+
+
+(defun format-haskell-on-save ()
+  "Function formats haskell buffer with brittany on save."
+  (when (eq major-mode 'haskell-mode)
+    (shell-command-to-string (format "brittany --write-mode inplace %s" buffer-file-name))))
+
+(add-hook 'after-save-hook #'format-haskell-on-save)
