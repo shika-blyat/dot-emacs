@@ -62,3 +62,9 @@
 
 ;; Rust
 (add-hook 'after-save-hook #'rust-format-buffer)
+
+;; Scrolling
+;;(setq mouse-wheel-scroll-amount '(3 ((shift) . 3)))
+(require 'sublimity)
+(require 'sublimity-scroll)
+(sublimity-mode 1)
