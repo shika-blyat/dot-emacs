@@ -1,7 +1,7 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
-;; sync' after modifying this file!
+;; sync' after modifying this file!  
 
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
@@ -64,7 +64,9 @@
 (add-hook 'after-save-hook #'rust-format-buffer)
 
 ;; Scrolling
-;;(setq mouse-wheel-scroll-amount '(3 ((shift) . 3)))
+;;(setq mouse-wheel-scroll-amount '(5 ((shift) . 5)))
 (require 'sublimity)
 (require 'sublimity-scroll)
 (sublimity-mode 1)
+(setq sublimity-scroll-weight 2
+      sublimity-scroll-drift-length 2)
