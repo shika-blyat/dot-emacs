@@ -5,4 +5,3 @@
 
 (map!
  "M-<right>" #'ace-window)
-(map! "C-f" #'undo)
