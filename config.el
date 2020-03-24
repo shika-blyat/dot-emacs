@@ -73,5 +73,5 @@
 
 ;; Modeline (the bar on the bottom of each buffer)
 (setq doom-modeline-height 1)
-(set-face-attribute 'mode-line nil :family "JetBrainsMono" :height 120)
-(set-face-attribute 'mode-line-inactive nil :family "JetBrainsMono" :height 120)
+(set-face-attribute 'mode-line nil :family "JetBrainsMono" :height 100)
+(set-face-attribute 'mode-line-inactive nil :family "JetBrainsMono" :height 100)

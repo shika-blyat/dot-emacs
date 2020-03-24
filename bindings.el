@@ -5,3 +5,4 @@
 
 (map!
  "M-<right>" #'ace-window)
+(map! "s-<backspace>" #'kill-region)
