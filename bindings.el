@@ -4,5 +4,5 @@
  "C-s" #'save-buffer)
 
 (map!
- "M-<right>" #'ace-window)
+ "M-<right>" #'ace-window )
 (map! "s-<backspace>" #'kill-region)

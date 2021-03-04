@@ -59,17 +59,23 @@
     (shell-command-to-string (format "brittany --write-mode inplace %s" buffer-file-name))))
 
 (add-hook 'after-save-hook #'format-haskell-on-save)
-
+(add-hook 'after-save-hook #'revert-buffer)
 ;; Rust
-(add-hook 'after-save-hook #'rust-format-buffer)
+(defun format-rust-on-save ()
+  "Function formats rust buffer with rustfmt on save."
+  (when (eq major-mode 'rustic-mode)
+    (rust-format-buffer)))
+
+(add-hook 'after-save-hook #'format-rust-on-save)
 
 ;; Scrolling
 ;;(setq mouse-wheel-scroll-amount '(5 ((shift) . 5)))
-(require 'sublimity)
-(require 'sublimity-scroll)
-(sublimity-mode 1)
-(setq sublimity-scroll-weight 2
-      sublimity-scroll-drift-length 2)
+;;(require 'sublimity)
+;;(require 'sublimity-scroll)
+;;(sublimity-mode 1)
+;; (setq sublimity-scroll-weight 2
+;;      sublimity-scroll-drift-length 2)
+
 
 ;; Modeline (the bar on the bottom of each buffer)
 (setq doom-modeline-height 1)
